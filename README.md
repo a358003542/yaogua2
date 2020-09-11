@@ -1,2 +1,9 @@
 # yaogua2
-准备使用electron来实现摇卦程序桌面端，界面用html5来实现是最灵活便捷的，而且electron也可以调用flask制作的web_server，然后利用python来对接c和c++，这应该是最合理的混合编程模式了。
+原摇卦桌面程序第二版。使用electron来实现的。
+
+
+## exe下载
+[下载地址](https://1drv.ms/u/s!AuCYFvwp2KHMgo96Pe-BrN29y09agA?e=i02qmM)
+
+## 和原QWebEngine首先的对比
+安装包体积更小，程序启动更快。
