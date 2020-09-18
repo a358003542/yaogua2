@@ -7,3 +7,9 @@
 
 ## 和原QWebEngine首先的对比
 安装包体积更小，程序启动更快。
+
+
+
+## 视频讲解
+
+[视频讲解](https://www.bilibili.com/video/BV19T4y1w7vH/)
