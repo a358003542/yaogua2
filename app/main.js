@@ -6,7 +6,7 @@ let mainWindow = null;
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 700, backgroundColor: '#fff'})
+  mainWindow = new BrowserWindow({width: 800, height: 650, backgroundColor: '#fff'})
 
   // and load the index.html of the app.
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'))
