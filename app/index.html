@@ -3,7 +3,6 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="wanze">
@@ -12,14 +11,12 @@
 
   <title>周易摇卦小程序</title>
 
-  <link href="font-awesome.css" rel="stylesheet" media="screen">
-  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" type="text/css" href="elegant.css" media="screen">
-
+  <link href="./css/font-awesome.css" rel="stylesheet" media="screen">
+  <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" type="text/css" href="./css/elegant.css" media="screen">
 </head>
 
 <body>
-
   <div class="container-fluid">
     <div class="col-md-10">
       <article>
@@ -47,7 +44,8 @@
             <div>
               <button class="btn btn-default" onclick="yaogua();" type="button">测一卦
               </button>
-              <button onclick="check_history();" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#myModal">
+              <button onclick="check_history();" type="button" class="btn btn-default pull-right" data-toggle="modal"
+                data-target="#myModal">
                 历史记录
               </button>
             </div>
@@ -56,7 +54,8 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
                     <h4 class="modal-title" id="myModalLabel">
                       历史记录</h4>
                   </div>
@@ -74,8 +73,10 @@
             <div class="tab-div">
               <!-- Nav tabs -->
               <ul id="tab" class="nav nav-tabs" style="padding-left:0px;" role="tablist">
-                <li role="presentation" class="active"><a href="#yuanwen" aria-controls="yuanwen" role="tab" data-toggle="tab" aria-expanded="true">本卦</a></li>
-                <li role="presentation" class=""><a href="#biangua-yuanwen" aria-controls="biangua-yuanwen" role="tab" data-toggle="tab" aria-expanded="false">变卦</a></li>
+                <li role="presentation" class="active"><a href="#yuanwen" aria-controls="yuanwen" role="tab"
+                    data-toggle="tab" aria-expanded="true">本卦</a></li>
+                <li role="presentation" class=""><a href="#biangua-yuanwen" aria-controls="biangua-yuanwen" role="tab"
+                    data-toggle="tab" aria-expanded="false">变卦</a></li>
               </ul>
 
               <!-- Tab panes -->
@@ -85,29 +86,17 @@
                 <div role="tabpanel" class="tab-pane fade" id="biangua-yuanwen">
                 </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
       </article>
     </div>
-
-
   </div>
 
-
-  <footer>
-    <div id="footer">
-    </div>
-  </footer>
-
-  <script src="jquery.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-  <script src="moment.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/moment.min.js"></script>
   <script src="yaogua.js"></script>
-
 
 </body>
 

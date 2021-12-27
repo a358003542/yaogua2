@@ -111,7 +111,7 @@ function yaogua() {
 }
 
 
-function check_history(){
+function check_history() {
     var yaogua_history;
     if ("yaogua_history" in localStorage) {
         yaogua_history = JSON.parse(localStorage.yaogua_history);
@@ -121,9 +121,9 @@ function check_history(){
 
     var table_html = '<table class="table"><thead><tr><td>预测时间</td><td>主卦</td><td>变卦</td></tr></thead><tbody>'
 
-    for (let item of yaogua_history.reverse()){
+    for (let item of yaogua_history.reverse()) {
         var time_str = moment(item[0]).format("YYYY-MM-DD HH:mm:ss");
-        table_html += `<tr><th>${time_str}</th><th>${item[1]}</th><th>${item[2]}</th></tr>` ;
+        table_html += `<tr><th>${time_str}</th><th>${item[1]}</th><th>${item[2]}</th></tr>`;
     }
     table_html += '</tbody></table>'
 

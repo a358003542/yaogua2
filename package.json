@@ -1,14 +1,19 @@
 {
   "name": "yaogua2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "周易摇卦桌面端程序",
-  "author": "wanze <a358003542@outlook.com>",
+  "author": {
+    "name": "wanze",
+    "email": "a358003542@outlook.com"
+  },
   "license": "MIT",
   "main": "app/main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "style": "eslint app/*.js",
+    "test": "mocha",
+    "validate": "npm run style && npm run test"
   },
   "repository": "https://github.com/a358003542/yaogua2",
   "keywords": [
@@ -17,7 +22,9 @@
   ],
   "devDependencies": {
     "electron": "^10.1.1",
-    "electron-builder": "^22.8.0"
+    "electron-builder": "^22.8.0",
+    "eslint": "^8.5.0",
+    "mocha": "^9.1.3"
   },
   "build": {
     "appId": "io.a358003542.yaogua2",
