@@ -2,11 +2,18 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
-let mainWindow = null;
 
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 800, height: 700, backgroundColor: '#fff' })
+  let mainWindow = new BrowserWindow({
+    width: 800,
+    height: 700,
+    backgroundColor: '#fff',
+    //webPreferences: {
+      // 预加载脚本
+    //  preload: path.join(__dirname, 'preload.js')
+    //}
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'))

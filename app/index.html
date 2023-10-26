@@ -4,43 +4,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>周易摇卦小程序</title>
 
-  <link href="./css/font-awesome.css" rel="stylesheet" media="screen">
-  <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" type="text/css" href="./css/elegant.css" media="screen">
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./css/base.css" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="col-md-10">
-      <article>
+  <div class="flex-wrapper">
+    <main>
+      <div class="container mt-3" style="height:75vh;">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 article-content">
-
-            <style>
-              .tab-div {
-                position: relative;
-                padding: 15px 15px 15px;
-                margin: 10px -15px 15px;
-                border-color: #e5e5e5 #eee #eee;
-                border-style: solid;
-              }
-
-              #tab li {
-                margin-left: 0px;
-                margin-bottom: -1px;
-              }
-            </style>
-
-            <br>
+          <div class="col">
+            <br />
             <h2>摇卦</h2>
             <p>在摇卦先静心，并问自己所求所疑问之事。</p>
             <div>
-              <button class="btn btn-default" onclick="yaogua();" type="button">测一卦
+              <button class="btn btn-outline-primary" onclick="yaogua();" type="button">测一卦
               </button>
-              <button onclick="check_history();" type="button" class="btn btn-default pull-right" data-toggle="modal"
-                data-target="#myModal">
+              <button onclick="check_history();" type="button" class="btn btn-outline-primary float-end"
+                data-bs-toggle="modal" data-bs-target="#myModal">
                 历史记录
               </button>
             </div>
@@ -49,8 +33,6 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">×</span></button>
                     <h4 class="modal-title" id="myModalLabel">
                       历史记录</h4>
                   </div>
@@ -58,7 +40,7 @@
                     <div id="history"></div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close
                     </button>
                   </div>
                 </div>
@@ -67,32 +49,41 @@
 
             <div class="tab-div">
               <!-- Nav tabs -->
-              <ul id="tab" class="nav nav-tabs" style="padding-left:0px;" role="tablist">
-                <li role="presentation" class="active"><a href="#yuanwen" aria-controls="yuanwen" role="tab"
-                    data-toggle="tab" aria-expanded="true">本卦</a></li>
-                <li role="presentation" class=""><a href="#biangua-yuanwen" aria-controls="biangua-yuanwen" role="tab"
-                    data-toggle="tab" aria-expanded="false">变卦</a></li>
+              <ul id="tab" class="nav nav-pills nav-pill" style="padding-left:0px;" role="tablist">
+                <li role="presentation" class="nav-item">
+                  <button type="button" class="nav-link active" href="#yuanwen" aria-controls="yuanwen" role="tab"
+                    aria-selected="true" data-bs-toggle="tab">本卦</button>
+                </li>
+                <li role="presentation" class="nav-item">
+                  <button type="button" class="nav-link" href="#biangua-yuanwen" aria-controls="biangua-yuanwen"
+                    role="tab" aria-selected="false" data-bs-toggle="tab">变卦</button>
+                </li>
               </ul>
 
               <!-- Tab panes -->
+              <br />
               <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade active in" id="yuanwen">
+                <div role="tabpanel" class="tab-pane fade active show" id="yuanwen" aria-labelledby="bengua">
+                  本卦...
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="biangua-yuanwen">
+                <div role="tabpanel" class="tab-pane fade" id="biangua-yuanwen" aria-labelledby="biangua">
+                  变卦...
                 </div>
               </div>
+
+
             </div>
+
           </div>
         </div>
-      </article>
-    </div>
+      </div>
+    </main>
   </div>
 
-  <script src="./js/jquery.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/moment.min.js"></script>
-  <script src="yaogua.js"></script>
 
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/moment.min.js"></script>
+  <script src="./yaogua.js"></script>
 </body>
 
 </html>
