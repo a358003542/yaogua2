@@ -8,7 +8,7 @@ const path = require('path')
 
 function createWindow() {
   // Create the browser window.
-  let mainWindow = new BrowserWindow({
+  const mainWindow = new BrowserWindow({
     width: 800,
     height: 700,
     backgroundColor: '#fff',
@@ -20,10 +20,6 @@ function createWindow() {
 
   // and load the index.html of the app.
   mainWindow.loadURL(path.join('file://', __dirname, 'index.html'))
-
-  mainWindow.on('closed', () => {
-    mainWindow = null;
-  });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
