@@ -11,7 +11,6 @@
   "type": "commonjs",
   "scripts": {
     "start": "electron-forge start",
-    "dist": "electron-builder",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
@@ -30,23 +29,6 @@
     "bootstrap": "^5.3.2",
     "electron": "^27.0.2",
     "moment": "^2.29.4"
-  },
-  "build": {
-    "appId": "io.a358003542.yaogua2",
-    "productName": "yaogua2",
-    "directories": {
-      "buildResources": "resources"
-    },
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "license": "LICENSE"
-    }
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
