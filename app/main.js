@@ -1,5 +1,8 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
+// stop your app launching multiple times during installation
+if (require('electron-squirrel-startup')) app.quit();
+
 const path = require('path')
 
 
